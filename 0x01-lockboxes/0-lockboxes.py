@@ -18,7 +18,8 @@ def canUnlockAll(boxes):
                     return False
                 unique = list(unlock_boxes - set(boxes[i]))
                 for j in range(0, len(unique)):
-                    unlock_boxes.update(boxes[unique[j]])
+                    if unique[j] < len(boxes):
+                        unlock_boxes.update(boxes[unique[j]])
                     if unique[j] in locked_boxes:
                         locked_boxes.remove(unique[j])
             else:
