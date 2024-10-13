@@ -16,7 +16,7 @@ def canUnlockAll(boxes):
             if i in unlock_boxes:
                 if not isinstance(boxes[i], list):
                     return False
-                unique = list(set(boxes[i]) - unlock_boxes)
+                unique = list(unlock_boxes - set(boxes[i]))
                 for j in range(0, len(unique)):
                     if unique[j] < len(boxes):
                         unlock_boxes.update(boxes[unique[j]])
