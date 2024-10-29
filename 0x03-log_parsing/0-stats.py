@@ -103,6 +103,7 @@ def parse_line():
                 count = 0
                 print_data(data['total_size'], data['status_codes'])
 
+        print_data(data['total_size'], data['status_codes'])
     except (TypeError, ValueError, IndexError):
         pass
     except KeyboardInterrupt:
