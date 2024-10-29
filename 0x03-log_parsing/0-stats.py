@@ -9,28 +9,27 @@ from sys import stdin
 import re
 from datetime import datetime
 
-
+"""
 def validate_ip(ip4_address):
-    """
     Args:
         ip4_address: ip4_address passes
         return: True if ip is valid
-    """
     if not ip4_address:
         return False
 
-    pattern = r"^\d{1,3}$"
+    pattern = r"^d{1,3}$"
     octects = ip4_address.split(".")
     return all(re.match(pattern, octect) for octect in octects)
 
-
+"""
+"""
 def validate_time(date, time):
-    """
     checks if date and time are valid
     Args:
         date: current date
         time: current time
-    """
+
+
     if not date and not time:
         return False
 
@@ -40,6 +39,7 @@ def validate_time(date, time):
         return True
     except ValueError:
         return False
+"""
 
 
 def update_status_code(status_list, code):
@@ -92,9 +92,7 @@ def parse_line():
             line = line.split()
             count += 1
 
-            if (validate_ip(line[0]) and
-                validate_time(line[2], line[3]) and
-                    line[-1].isdigit()):
+            if line[-1].isdigit():
                 if line[-2] in status_codes:
                     data["total_size"] += int(line[-1])
                     update_status_code(data["status_codes"], line[-2])
