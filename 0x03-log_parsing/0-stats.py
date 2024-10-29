@@ -66,9 +66,9 @@ def print_data(total_size, status_list):
         total_size: Print total size of input
         status_list: list of status code (dict)
     """
-    if status_list and total_size:
-        print(f"File size: {total_size}")
+    print(f"File size: {total_size}")
 
+    if status_list:
         for data in status_list:
             for key, value in data.items():
                 print(f"{key}: {value}")
