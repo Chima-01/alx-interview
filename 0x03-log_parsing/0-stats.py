@@ -92,7 +92,7 @@ def parse_line():
             line = line.split()
             count += 1
 
-            if line[-1]:
+            if line[-1] and len(line) > 6:
                 if line[-2] in status_codes:
                     data["total_size"] += int(line[-1])
                     update_status_code(data["status_codes"], line[-2])
