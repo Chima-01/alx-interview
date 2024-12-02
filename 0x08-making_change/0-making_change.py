@@ -1,6 +1,17 @@
 #!/usr/bin/python3
+"""
+Given a pile of coins of different values,
+determine the fewest number of coins needed
+to meet a given amount total.
+"""
+
 
 def makeChange(coins, total):
+    """
+        Args:
+            coins: a list of coin for change
+            total: total amount to make a round up change with
+    """
     if total <= 0:
         return 0
     fewest_coin_per_index = [float("inf")] * (total + 1)
