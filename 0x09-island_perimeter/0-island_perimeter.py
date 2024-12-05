@@ -12,6 +12,9 @@ def island_perimeter(grid):
         arg:
             grid: a list of list (represents the island)
     """
+    if not grid or not isinstance(grid, list):
+        return
+
     perimeter = 0
 
     for row in range(len(grid)):
