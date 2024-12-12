@@ -24,7 +24,7 @@ def isWinner(x, nums):
             players["Ben"] += 1
             continue
 
-        index = [True for num in range(nums[i] + 1)]
+        index = [False, False] + [True] * (nums[i] - 1)
 
         p = 2
         while (p * p <= nums[i]):
@@ -39,7 +39,7 @@ def isWinner(x, nums):
         if true_count % 2:
             players['Ben'] += 1
         else:
-            players['Maria']
+            players['Maria'] += 1
 
     if players['Maria'] == players['Ben']:
         return None
