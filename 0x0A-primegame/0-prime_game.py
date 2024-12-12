@@ -11,6 +11,9 @@ def isWinner(x, nums):
             x: number of game rounds
             num: An array of number to find prime within
     """
+    if x <= 0 or not nums:
+        return None
+
     players = {
             'Maria': 0,
             'Ben': 0
