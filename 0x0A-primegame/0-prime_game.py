@@ -28,7 +28,7 @@ def isWinner(x, nums):
 
         p = 2
         while (p * p <= nums[i]):
-            if index[p] is True:
+            if index[p]:
                 for j in range(p * p, nums[i] + 1, p):
                     index[j] = False
 
