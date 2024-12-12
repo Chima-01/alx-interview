@@ -41,7 +41,4 @@ def isWinner(x, nums):
         else:
             players['Maria'] += 1
 
-    if players['Maria'] == players['Ben']:
-        return None
-    else:
-        return 'Maria' if players['Maria'] > players['Ben'] else 'Ben'
+    return 'Maria' if players['Maria'] > players['Ben'] else 'Ben'
