@@ -37,8 +37,7 @@ def isWinner(x, nums):
         true_count = index.count(True)
 
         if true_count % 2:
-            players['Ben'] += 1
-        else:
             players['Maria'] += 1
-
+        else:
+            players['Ben'] += 1
     return 'Maria' if players['Maria'] > players['Ben'] else 'Ben'
